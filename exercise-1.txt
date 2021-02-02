@@ -27,10 +27,11 @@ Associate_Qualification char(200),
 Associate_Email char(100),
 Associate_Password char(20))
 ---creating questions table
-drop table Questions
+
 create table Questions(Question_Id char(20) constraint prikey primary key ,Module_Id char(20) constraint fk foreign key references  Module_Info(Module_Id) ,
 Question_Text char(900))
---creating Associate_Status tablecreate table Associate_Status(Associate_Id char(20) constraint foke foreign key references Associate_Info(Associate_Id ),
+--creating Associate_Status table--
+create table Associate_Status(Associate_Id char(20) constraint foke foreign key references Associate_Info(Associate_Id ),
 Module_Id char(20) constraint forkey foreign key references Module_info(Module_Id),
 Start_Date char(20),
 End_Date char(20),
